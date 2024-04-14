@@ -44,9 +44,21 @@ public class ApisApplication {
 	public CommandLineRunner commandLineRunner(UserService service){
 		return args -> {
 			service.register(User.builder()
-					.userName("Nurudeen Mustapha")
+					.userName("Nurudeen")
 					.email("Adebayour@gmail.com")
 					.password("1234")
+					.build());
+
+			service.register(User.builder()
+					.userName("Adebayour")
+					.email("Ade@gmail.com")
+					.password("12345")
+					.build());
+
+			service.register(User.builder()
+					.userName("Ayinla")
+					.email("nman@gmail.com")
+					.password("12345")
 					.build());
 		};
 	}

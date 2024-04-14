@@ -19,7 +19,7 @@ public class UserService {
         var userIndex = IntStream.range(0, USERS_LIST.size())
                 .filter(i -> USERS_LIST.get(i).getEmail().equals(user.getEmail()))
                 .findAny()
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElseThrow(() -> new RuntimeException("user not found"));
 
         var connectedUser = USERS_LIST.get(userIndex);
         if (!connectedUser.getPassword().equals(user.getPassword())) {
